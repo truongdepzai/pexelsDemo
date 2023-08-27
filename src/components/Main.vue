@@ -86,10 +86,10 @@ export default{
 
 <template>
     <div class="menu flex gap-2 justify-center mt-5">
-        <div @click="getMenu(1)" :class="{'bg-black text-white':num == 1}" class="hover:cursor-pointer py-2 px-5 rounded-3xl border hover:bg-black hover:text-white font-semibold">Home</div>
-        <div @click="getMenu(2)" :class="{'bg-black text-white':num == 2}" class="hover:cursor-pointer py-2 px-5 rounded-3xl border hover:bg-black hover:text-white font-semibold">Videos</div>
-        <div @click="getMenu(3)" :class="{'bg-black text-white':num == 3}" class="hover:cursor-pointer py-2 px-5 rounded-3xl border hover:bg-black hover:text-white font-semibold">Ranking</div>
-        <div @click="getMenu(4)" :class="{'bg-black text-white':num == 4}" class="hover:cursor-pointer py-2 px-5 rounded-3xl border hover:bg-black hover:text-white font-semibold">Challenge</div>
+        <div @click="getMenu(1)" :class="{'bg-black text-white':num == 1}" class="duration-500 hover:cursor-pointer py-2 px-5 rounded-3xl border hover:bg-black hover:text-white font-semibold">Home</div>
+        <div @click="getMenu(2)" :class="{'bg-black text-white':num == 2}" class="duration-500 hover:cursor-pointer py-2 px-5 rounded-3xl border hover:bg-black hover:text-white font-semibold">Videos</div>
+        <div @click="getMenu(3)" :class="{'bg-black text-white':num == 3}" class="duration-500 hover:cursor-pointer py-2 px-5 rounded-3xl border hover:bg-black hover:text-white font-semibold">Ranking</div>
+        <div @click="getMenu(4)" :class="{'bg-black text-white':num == 4}" class="duration-500 hover:cursor-pointer py-2 px-5 rounded-3xl border hover:bg-black hover:text-white font-semibold">Challenge</div>
     </div>
 
     <Photos v-if="photos || num == 1"/>
