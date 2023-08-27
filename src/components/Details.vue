@@ -15,24 +15,30 @@ export default {
 
     }
   },
-  mounted(){
-      this.getPhotos()
-      this.getId();
-      
+  created(){
+    this.getPhotos();
+    
+        
+    },
+    mounted(){
+  
     },
   
     methods:{
       getId(){
-         console.log(this.dataPhotos)
-
+         
+    
       },
       async getPhotos(){
-        await axios.get('https://api.pexels.com/v1/curated?page=2&per_page=42',{
+        await axios.get(`https://api.pexels.com/v1/photos/${this.id}`,{
             headers:{
                 'Authorization':'D55xSJC4kly5uEQZj2GNfpg6spG4VQoIoxG343uiX21msiVLqi7YfuNd'
             }
         }).then((response) =>{
-            this.dataPhotos = response.data.photos;
+            this.dataPhotos = response.data
+            console.log(this.dataPhotos)
+        },{
+            
         })
       },
       Like(){
@@ -53,8 +59,8 @@ export default {
   </div> -->
   <div class="flex items-center w-full justify-between bg-white ">
     <div class="left-0 flex gap-4 items-center m-5">
-      <img src="https://images.pexels.com/photos/18020255/pexels-photo-18020255.jpeg?auto=compress&cs=tinysrgb&h=130" class="rounded-full h-[40px] w-[40px]" alt="" />
-      <p class="font-bold text-black text-[20px]">Andy Lee</p>
+      <img :src="dataPhotos.src?.small" class="rounded-full h-[40px] w-[40px]" alt="" />
+      <a :href="dataPhotos.photographer_url"><p class="font-bold text-black text-[20px]">{{dataPhotos.photographer}}</p></a>
     </div>
     <div class="right-0 flex gap-2 ">
       <button @click="Mark()" :class="{'bg-yellow-200':isMark}" class="flex duration-500 items-center gap-2 border border-black rounded-lg hover:cursor-pointer hover:bg-black hover:text-white font-semibold py-2 px-5">
@@ -82,9 +88,9 @@ export default {
   <div class="flex items-center justify-center">
     <img
       class="rounded-2xl m-5"
-      src="https://images.pexels.com/photos/18020255/pexels-photo-18020255.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+      :src="dataPhotos.src?.portrait"
       alt=""
     />
   </div>
-  <Main/>
+  <Main />
 </template>

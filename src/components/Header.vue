@@ -30,7 +30,7 @@
         <p class=" text-white font-bold text-[18px] hover:text-black hover:cursor-pointer">License</p>
         <font-awesome-icon icon="fa-solid fa-bell " class="hover:cursor-pointer hover:text-black text-white animate-bounce hover:animate-none "/>
         <img class="rounded-2xl hover:cursor-pointer" src="https://images.pexels.com/users/avatars/530121465/omenx-gaming-922.png?auto=compress&fit=crop&h=30&w=30&dpr=1" alt="">
-        <button class=" px-5 py-3 rounded-lg bg-white hover:bg-black hover:text-white font-semibold hover:duration-500">Upload</button>
+        <button class=" px-5 py-3 rounded-lg bg-white hover:bg-black hover:text-white font-bold hover:duration-500">Upload</button>
 
     </div>
     </div>
