@@ -35,17 +35,6 @@ import axios from "axios";
             this.isMark = !this.isMark;
         },
 
-        //     getVideos(){
-        //     axios.get('https://api.pexels.com/videos/search?query=nature&per_page=1',{
-        //     headers:{
-        //         'Authorization':'D55xSJC4kly5uEQZj2GNfpg6spG4VQoIoxG343uiX21msiVLqi7YfuNd'
-        //     }
-        //     }).then((response) =>{
-        //     this.dataVideos = response.data.videos.video_files;
-        //     console.log(this.dataVideos)
-
-        //     })
-        // },
         },
         created(){
             // this.getVideos

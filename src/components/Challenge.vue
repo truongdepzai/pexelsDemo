@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <p class="w-full flex justify-center text-[40px] font-semibold " >Thử thách</p>
+    <p class="w-full flex justify-center text-[40px] font-semibold m-5 " >Thử thách</p>
     <div class="grid grid-cols-6">
         <div class="col-start-2 col-span-4">
             <div class="grid grid-cols-2 ">

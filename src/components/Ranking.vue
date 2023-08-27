@@ -42,7 +42,7 @@ export default{
         <div class="right-content col-start-4 col-span-4">
             <div class="grid grid-cols-4 gap-4">
                 <div class="w-full " v-for="photo in dataRanking">
-                    <img class="w-full rounded-xl h-full" :src="photo.src?.small" alt="">
+                    <router-link :to="`/Details/${photo.id}`"><img class="w-full rounded-xl h-full" :src="photo.src?.small" alt=""></router-link>
                 </div>
             </div>
         </div>

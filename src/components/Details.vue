@@ -51,12 +51,7 @@ export default {
 };
 </script>
 <template>
-  <!-- <div
-    class="flex gap-4 items-center absolute p-3 m-5 rounded-xl left-0 bottom-5 hover:cursor-pointer"
-  >
-    <img :src="photo.src.small" class="rounded-full h-[40px] w-[40px]" alt="" />
-    <p class="font-bold text-white text-[20px]">{{ photo.photographer }}</p>
-  </div> -->
+
   <div class="flex items-center w-full justify-between bg-white ">
     <div class="left-0 flex gap-4 items-center m-5">
       <img :src="dataPhotos.src?.small" class="rounded-full h-[40px] w-[40px]" alt="" />
